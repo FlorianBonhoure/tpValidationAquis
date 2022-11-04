@@ -26,14 +26,15 @@
     <body>
         <h1>Liste des étudiants</h1>
         <table>
-            <tr><th>id</th><th>nom</th><th>moyenne</th></tr>
+            <tr><th>id</th><th>nom</th><th>moyenne</th><th>photo</th></tr>
             <c:forEach items="${etudiants}" var="etudiant">
                 <tr>
                     <td><c:out value="${ etudiant.getId() }" /> </td> 
                     <td><c:out value="${ etudiant.getNom() }" /></td>
                     <td><c:out value="${ etudiant.getMoyenne() }" /></td>
+                    <td><img src="<c:out value='${ etudiant.getImage() }'/>" alt="<c:out value='${ etudiant.getNom() }'/>" width="50px" height="50px" /></td>
                 </tr>
             </c:forEach>
-        </table>    
+        </table> 
     </body>
 </html>
