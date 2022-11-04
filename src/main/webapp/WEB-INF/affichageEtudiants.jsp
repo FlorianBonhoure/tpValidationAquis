@@ -8,12 +8,12 @@
     </head>
     <body>
         <h1>Liste des étudiants</h1>
-        <ul>
+        <ol style="list-style-type:decimal;">
             <c:forEach items="${etudiants}" var="etudiant">
                 <li>
                     nom <c:out value="${ etudiant.getNom() }" /> id <c:out value="${ etudiant.getId() }" /> <c:out value="${ etudiant.getMoyenne() }" />
                 </li>
             </c:forEach>
-        </ul>    
+        </ol>    
     </body>
 </html>
