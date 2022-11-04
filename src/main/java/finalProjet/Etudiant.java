@@ -53,6 +53,6 @@ public class Etudiant {
     }
     
     public boolean equals(Etudiant etudiant){
-        return this.getId().equals(etudiant.getId());
+        return this.id.equals(etudiant.getId());
     }
 }

@@ -5,23 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Affichage des étudiants</title>
-        <style>
-            table{
-                border:1px solid black;
-                border-collapse: collapse;
-            }
-            
-            th{
-                font-weight: bold;
-                background-color: lightgray;
-                font-size: 1.5em;
-            }
-            
-            th, td{
-                padding:15px;
-                border: 1px solid black;
-            }
-        </style>
+        <link href="style/etudiant.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <h1>Liste des étudiants</h1>
