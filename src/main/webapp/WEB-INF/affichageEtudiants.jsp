@@ -8,12 +8,15 @@
     </head>
     <body>
         <h1>Liste des étudiants</h1>
-        <ol style="list-style-type:decimal;">
+        <table border="1" borderspacing="0">
+            <tr><th>id</th><th>nom</th><th>moyenne</th></tr>
             <c:forEach items="${etudiants}" var="etudiant">
-                <li>
-                    nom <c:out value="${ etudiant.getNom() }" /> id <c:out value="${ etudiant.getId() }" /> <c:out value="${ etudiant.getMoyenne() }" />
-                </li>
+                <tr>
+                    <td><c:out value="${ etudiant.getId() }" /> </td> 
+                    <td><c:out value="${ etudiant.getNom() }" /></td>
+                    <td><c:out value="${ etudiant.getMoyenne() }" /></td>
+                </tr>
             </c:forEach>
-        </ol>    
+        </table>    
     </body>
 </html>

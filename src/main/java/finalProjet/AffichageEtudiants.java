@@ -20,7 +20,7 @@ public class AffichageEtudiants extends HttpServlet {
        Etudiant e2 = new Etudiant("2","Etudiant2",14.0);
        Etudiant e3 = new Etudiant("3","Etudiant3",9.0);
        Etudiant e4 = new Etudiant("4","Etudiant4",15.0);
-       Etudiant e5 = new Etudiant("5","Etudiant1",8.0);
+       Etudiant e5 = new Etudiant("5","Etudiant5",8.0);
        etudiants.add(e1);
        etudiants.add(e2);
        etudiants.add(e3);
