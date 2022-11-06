@@ -1,5 +1,8 @@
 package finalProjet;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Etudiant {
     private String id;
     private String nom;
@@ -33,7 +36,12 @@ public class Etudiant {
     }
 
     public void setNom(String nom) {
-        this.nom = nom;
+        Pattern p = Pattern.compile("^([a-zA-Z]|[ \\t]|['-])+$");
+        Matcher m = p.matcher(nom);
+        boolean match = m.matches();
+        if(match){
+            this.nom = nom;
+        } 
     }
 
     public double getMoyenne() {
@@ -41,6 +49,11 @@ public class Etudiant {
     }
 
     public void setMoyenne(double moyenne) {
+        if(moyenne > 20){
+            moyenne = 20;
+        } else if(moyenne < 0){
+            moyenne = 0;
+        }
         this.moyenne = moyenne;
     }
     
@@ -49,7 +62,14 @@ public class Etudiant {
     }
 
     public void setImage(String image) {
-        this.image = image;
+        Pattern p = Pattern.compile("^([a-zA-Z_0-9]|[ \\t]|[\\p{Punct}&&[^\\\\/:*?\"<>|]])+$"); //Tous caractères sauf : \/:*?"<>|
+        Matcher m = p.matcher(image);
+        boolean match = m.matches();
+        if(match){
+            if(image.endsWith(".jpg") || image.endsWith(".png") || image.endsWith(".gif")){
+               this.image = image; 
+            } 
+        }  
     }
     
     public boolean equals(Etudiant etudiant){
